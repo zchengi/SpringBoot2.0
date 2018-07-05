@@ -1,0 +1,34 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>syncServlet</servlet-name>
+        <servlet-class>servlet.SyncServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>syncServlet</servlet-name>
+        <url-pattern>/syncServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>asyncServlet</servlet-name>
+        <servlet-class>servlet.AsyncServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>asyncServlet</servlet-name>
+        <url-pattern>/asyncServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sse</servlet-name>
+        <servlet-class>servlet.SSE</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sse</servlet-name>
+        <url-pattern>/sse</url-pattern>
+    </servlet-mapping>
+</web-app>
